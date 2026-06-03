@@ -1,0 +1,348 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <!-- Background gradient - soft white to light blue -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fbff;stop-opacity:1" />
+      <stop offset="35%" style="stop-color:#f0f5ff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#e8f1ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dfeafc;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Subtle radial glow -->
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- iPhone screen gradients -->
+    <linearGradient id="screen1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screen2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screen3Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#111118;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1c1c2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screen4Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#162016;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Accent gradient for number circles -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007AFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5856D6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Record button gradient -->
+    <radialGradient id="recBtnGrad" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" style="stop-color:#FF453A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D70015;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Green checkmark gradient -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34C759;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#30B350;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- App icon gradient -->
+    <linearGradient id="appIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007AFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5856D6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#AF52DE;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Phone shadow -->
+    <filter id="phoneShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#1a3a6a" flood-opacity="0.12"/>
+    </filter>
+    
+    <!-- Glow filter for active elements -->
+    <filter id="glowBlue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="glowRed" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="glowGreen" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle line pattern -->
+    <pattern id="dotPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="0.6" fill="#c0d0e8" opacity="0.4"/>
+    </pattern>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowHead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#b0c4de" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="1000" fill="url(#bgGrad)" rx="0"/>
+  <rect width="1600" height="1000" fill="url(#dotPattern)" opacity="0.3"/>
+  <rect width="1600" height="1000" fill="url(#centerGlow)"/>
+
+  <!-- Title -->
+  <text x="800" y="88" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="700" fill="#1d1d1f" letter-spacing="-0.5">How It Works</text>
+  <text x="800" y="122" text-anchor="middle" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="400" fill="#86868b" letter-spacing="0.2">Record with both cameras in four simple steps</text>
+
+  <!-- ============================================ -->
+  <!-- CONNECTING FLOW LINES (behind phones) -->
+  <!-- ============================================ -->
+  
+  <!-- Line 1→2 -->
+  <line x1="310" y1="470" x2="440" y2="470" stroke="#c8d8ee" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowHead)" opacity="0.7"/>
+  
+  <!-- Line 2→3 -->
+  <line x1="700" y1="470" x2="830" y2="470" stroke="#c8d8ee" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowHead)" opacity="0.7"/>
+  
+  <!-- Line 3→4 -->
+  <line x1="1090" y1="470" x2="1220" y2="470" stroke="#c8d8ee" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowHead)" opacity="0.7"/>
+
+
+  <!-- ============================================ -->
+  <!-- STEP 1: Open Lookout -->
+  <!-- ============================================ -->
+  <g transform="translate(120, 200)">
+    <!-- iPhone Frame -->
+    <g filter="url(#phoneShadow)">
+      <rect x="20" y="0" width="180" height="380" rx="28" ry="28" fill="#1d1d1f"/>
+      <rect x="24" y="4" width="172" height="372" rx="25" ry="25" fill="#2c2c2e"/>
+      <!-- Screen -->
+      <rect x="28" y="14" width="164" height="352" rx="22" ry="22" fill="url(#screen1Grad)"/>
+      
+      <!-- Dynamic Island -->
+      <rect x="80" y="20" width="60" height="18" rx="9" fill="#000000"/>
+      
+      <!-- App Icon centered on screen -->
+      <rect x="62" y="110" width="96" height="96" rx="22" fill="url(#appIconGrad)"/>
+      <!-- Dual lens icon inside app icon -->
+      <circle cx="95" cy="148" r="14" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2"/>
+      <circle cx="125" cy="148" r="14" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2"/>
+      <circle cx="95" cy="148" r="5" fill="rgba(255,255,255,0.7)"/>
+      <circle cx="125" cy="148" r="5" fill="rgba(255,255,255,0.7)"/>
+      <!-- Connecting line between lenses -->
+      <line x1="109" y1="148" x2="111" y2="148" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+      
+      <!-- App name -->
+      <text x="110" y="232" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" letter-spacing="-0.2">Lookout</text>
+      
+      <!-- Subtitle -->
+      <text x="110" y="254" text-anchor="middle" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="rgba(255,255,255,0.5)">Dual Camera Recording</text>
+      
+      <!-- Open button -->
+      <rect x="60" y="280" width="100" height="34" rx="17" fill="#007AFF"/>
+      <text x="110" y="302" text-anchor="middle" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">OPEN</text>
+      
+      <!-- Home indicator -->
+      <rect x="75" y="350" width="70" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+    </g>
+    
+    <!-- Step Number -->
+    <circle cx="110" cy="420" r="18" fill="url(#accentGrad)" filter="url(#glowBlue)"/>
+    <text x="110" y="426" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">1</text>
+    
+    <!-- Label -->
+    <text x="110" y="462" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#1d1d1f" letter-spacing="-0.2">Open Lookout</text>
+    <text x="110" y="482" text-anchor="middle" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#86868b">Launch the app</text>
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- STEP 2: Select Mode -->
+  <!-- ============================================ -->
+  <g transform="translate(510, 200)">
+    <!-- iPhone Frame -->
+    <g filter="url(#phoneShadow)">
+      <rect x="20" y="0" width="180" height="380" rx="28" ry="28" fill="#1d1d1f"/>
+      <rect x="24" y="4" width="172" height="372" rx="25" ry="25" fill="#2c2c2e"/>
+      <!-- Screen -->
+      <rect x="28" y="14" width="164" height="352" rx="22" ry="22" fill="url(#screen2Grad)"/>
+      
+      <!-- Dynamic Island -->
+      <rect x="80" y="20" width="60" height="18" rx="9" fill="#000000"/>
+      
+      <!-- Header -->
+      <text x="110" y="60" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.9)" letter-spacing="0.5">SELECT MODE</text>
+      
+      <!-- Mode Card 1: Split View (selected) -->
+      <rect x="40" y="80" width="140" height="72" rx="14" fill="rgba(0,122,255,0.15)" stroke="#007AFF" stroke-width="1.5"/>
+      <!-- Split icon -->
+      <line x1="70" y1="96" x2="70" y2="136" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="50" y="96" width="18" height="40" rx="3" fill="rgba(0,122,255,0.4)"/>
+      <rect x="72" y="96" width="18" height="40" rx="3" fill="rgba(0,122,255,0.3)"/>
+      <text x="110" y="112" text-anchor="start" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff" dx="-10">Split View</text>
+      <text x="110" y="128" text-anchor="start" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" fill="rgba(255,255,255,0.5)" dx="-10">Side by side</text>
+      <!-- Checkmark -->
+      <circle cx="166" cy="116" r="10" fill="#007AFF"/>
+      <polyline points="160,116 164,120 172,112" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Mode Card 2: PiP -->
+      <rect x="40" y="162" width="140" height="72" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <!-- PiP icon -->
+      <rect x="50" y="178" width="36" height="40" rx="3" fill="rgba(255,255,255,0.1)"/>
+      <rect x="68" y="200" width="16" height="16" rx="3" fill="rgba(255,255,255,0.25)"/>
+      <text x="110" y="194" text-anchor="start" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.7)" dx="-10">PiP</text>
+      <text x="110" y="210" text-anchor="start" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" fill="rgba(255,255,255,0.35)" dx="-10">Picture in picture</text>
+      
+      <!-- Mode Card 3: Focus -->
+      <rect x="40" y="244" width="140" height="72" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <!-- Focus icon -->
+      <circle cx="68" cy="280" r="16" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+      <circle cx="68" cy="280" r="6" fill="rgba(255,255,255,0.15)"/>
+      <text x="110" y="276" text-anchor="start" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.7)" dx="-10">Focus</text>
+      <text x="110" y="292" text-anchor="start" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" fill="rgba(255,255,255,0.35)" dx="-10">Single camera</text>
+      
+      <!-- Home indicator -->
+      <rect x="75" y="350" width="70" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+    </g>
+    
+    <!-- Step Number -->
+    <circle cx="110" cy="420" r="18" fill="url(#accentGrad)" filter="url(#glowBlue)"/>
+    <text x="110" y="426" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">2</text>
+    
+    <!-- Label -->
+    <text x="110" y="462" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#1d1d1f" letter-spacing="-0.2">Select Mode</text>
+    <text x="110" y="482" text-anchor="middle" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#86868b">Choose your layout</text>
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- STEP 3: Record -->
+  <!-- ============================================ -->
+  <g transform="translate(900, 200)">
+    <!-- iPhone Frame -->
+    <g filter="url(#phoneShadow)">
+      <rect x="20" y="0" width="180" height="380" rx="28" ry="28" fill="#1d1d1f"/>
+      <rect x="24" y="4" width="172" height="372" rx="25" ry="25" fill="#2c2c2e"/>
+      <!-- Screen -->
+      <rect x="28" y="14" width="164" height="352" rx="22" ry="22" fill="url(#screen3Grad)"/>
+      
+      <!-- Dynamic Island (recording active - red dot) -->
+      <rect x="80" y="20" width="60" height="18" rx="9" fill="#000000"/>
+      <circle cx="126" cy="29" r="4" fill="#FF453A">
+        <animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Split view - Front camera (top half) -->
+      <rect x="28" y="42" width="164" height="145" rx="0" fill="#1a2030"/>
+      <!-- Simulated face/selfie view -->
+      <circle cx="110" cy="100" r="28" fill="rgba(255,200,170,0.15)"/>
+      <circle cx="110" cy="90" r="14" fill="rgba(255,200,170,0.2)"/>
+      <rect x="88" y="106" width="44" height="30" rx="12" fill="rgba(255,200,170,0.12)"/>
+      <text x="48" y="56" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="500" fill="rgba(255,255,255,0.5)">FRONT</text>
+      
+      <!-- Divider line -->
+      <line x1="28" y1="187" x2="192" y2="187" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      
+      <!-- Split view - Back camera (bottom half) -->
+      <rect x="28" y="188" width="164" height="145" rx="0" fill="#182028"/>
+      <!-- Simulated landscape/scene -->
+      <rect x="28" y="268" width="164" height="65" rx="0" fill="rgba(60,100,60,0.15)"/>
+      <circle cx="150" cy="220" r="18" fill="rgba(255,220,100,0.08)"/>
+      <path d="M28,290 Q70,250 110,270 Q150,290 192,260 L192,333 L28,333 Z" fill="rgba(80,130,80,0.12)"/>
+      <text x="48" y="202" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="500" fill="rgba(255,255,255,0.5)">BACK</text>
+      
+      <!-- Recording timer -->
+      <rect x="72" y="340" width="50" height="18" rx="9" fill="rgba(255,69,58,0.2)"/>
+      <circle cx="82" cy="349" r="3" fill="#FF453A">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <text x="100" y="353" text-anchor="middle" font-family="-apple-system, 'SF Mono', monospace" font-size="9" font-weight="600" fill="#FF453A">2:34</text>
+      
+      <!-- Record button (large, prominent) -->
+      <circle cx="158" cy="349" r="14" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+      <rect x="148" y="339" width="20" height="20" rx="4" fill="url(#recBtnGrad)" filter="url(#glowRed)"/>
+      
+      <!-- Home indicator -->
+      <rect x="75" y="362" width="70" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+    </g>
+    
+    <!-- Step Number -->
+    <circle cx="110" cy="420" r="18" fill="url(#accentGrad)" filter="url(#glowBlue)"/>
+    <text x="110" y="426" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">3</text>
+    
+    <!-- Label -->
+    <text x="110" y="462" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#1d1d1f" letter-spacing="-0.2">Record</text>
+    <text x="110" y="482" text-anchor="middle" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#86868b">Capture both cameras</text>
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- STEP 4: Save Locally -->
+  <!-- ============================================ -->
+  <g transform="translate(1290, 200)">
+    <!-- iPhone Frame -->
+    <g filter="url(#phoneShadow)">
+      <rect x="20" y="0" width="180" height="380" rx="28" ry="28" fill="#1d1d1f"/>
+      <rect x="24" y="4" width="172" height="372" rx="25" ry="25" fill="#2c2c2e"/>
+      <!-- Screen -->
+      <rect x="28" y="14" width="164" height="352" rx="22" ry="22" fill="url(#screen4Grad)"/>
+      
+      <!-- Dynamic Island -->
+      <rect x="80" y="20" width="60" height="18" rx="9" fill="#000000"/>
+      
+      <!-- Success checkmark circle -->
+      <circle cx="110" cy="140" r="40" fill="rgba(52,199,89,0.12)"/>
+      <circle cx="110" cy="140" r="32" fill="rgba(52,199,89,0.18)" filter="url(#glowGreen)"/>
+      <circle cx="110" cy="140" r="24" fill="url(#greenGrad)"/>
+      <!-- Checkmark -->
+      <polyline points="97,140 106,149 123,132" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Saved text -->
+      <text x="110" y="205" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Saved!</text>
+      <text x="110" y="224" text-anchor="middle" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="rgba(255,255,255,0.5)">Stored on your device</text>
+      
+      <!-- File info card -->
+      <rect x="40" y="244" width="140" height="60" rx="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <!-- Video thumbnail -->
+      <rect x="50" y="254" width="32" height="24" rx="4" fill="rgba(52,199,89,0.2)"/>
+      <polygon points="62,262 62,272 70,267" fill="rgba(255,255,255,0.5)"/>
+      <text x="92" y="266" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.8)">VID_0042.mov</text>
+      <text x="92" y="280" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="400" fill="rgba(255,255,255,0.35)">2:34 · 142 MB</text>
+      <text x="92" y="294" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="400" fill="rgba(255,255,255,0.35)">4K · On Device</text>
+      
+      <!-- Lock/privacy icon -->
+      <g transform="translate(95, 318)">
+        <rect x="0" y="6" width="16" height="12" rx="3" fill="rgba(52,199,89,0.3)"/>
+        <path d="M3,6 L3,3 Q3,-1 8,-1 Q13,-1 13,3 L13,6" fill="none" stroke="rgba(52,199,89,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+      <text x="120" y="330" text-anchor="start" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="500" fill="rgba(52,199,89,0.7)" dx="-4">Private</text>
+      
+      <!-- Home indicator -->
+      <rect x="75" y="350" width="70" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+    </g>
+    
+    <!-- Step Number -->
+    <circle cx="110" cy="420" r="18" fill="url(#accentGrad)" filter="url(#glowBlue)"/>
+    <text x="110" y="426" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">4</text>
+    
+    <!-- Label -->
+    <text x="110" y="462" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600" fill="#1d1d1f" letter-spacing="-0.2">Save Locally</text>
+    <text x="110" y="482" text-anchor="middle" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#86868b">Private, on-device storage</text>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="800" y="960" text-anchor="middle" font-family="-apple-system, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#a1a1a6" letter-spacing="0.3">No cloud. No uploads. Your recordings stay on your device.</text>
+</svg>

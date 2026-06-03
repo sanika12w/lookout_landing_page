@@ -1,0 +1,406 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="40%" stop-color="#070e1a"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </radialGradient>
+
+    <!-- Subtle blue glow behind phone -->
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a3a6a" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#0d1f3c" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#020408" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Purple accent glow -->
+    <radialGradient id="purpleGlow" cx="55%" cy="45%" r="35%">
+      <stop offset="0%" stop-color="#2a1a4a" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#150d28" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#020408" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Top ambient light -->
+    <radialGradient id="topLight" cx="50%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#1a2d4d" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#020408" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Phone screen gradient (camera view - moody landscape) -->
+    <linearGradient id="cameraView" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2540"/>
+      <stop offset="25%" stop-color="#2a3a5a"/>
+      <stop offset="45%" stop-color="#3d4f6e"/>
+      <stop offset="55%" stop-color="#4a5d7a"/>
+      <stop offset="65%" stop-color="#2d4a3a"/>
+      <stop offset="80%" stop-color="#1e3328"/>
+      <stop offset="100%" stop-color="#0f1a14"/>
+    </linearGradient>
+
+    <!-- Sky gradient for camera view -->
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2d4a"/>
+      <stop offset="30%" stop-color="#2d3f5e"/>
+      <stop offset="60%" stop-color="#4a6080"/>
+      <stop offset="80%" stop-color="#6a85a5"/>
+      <stop offset="100%" stop-color="#8fa5be"/>
+    </linearGradient>
+
+    <!-- Golden hour glow -->
+    <radialGradient id="sunGlow" cx="65%" cy="58%" r="25%">
+      <stop offset="0%" stop-color="#d4a055" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#c48a3a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4a6080" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Phone body gradient -->
+    <linearGradient id="phoneBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a2a2e"/>
+      <stop offset="50%" stop-color="#1a1a1e"/>
+      <stop offset="100%" stop-color="#111114"/>
+    </linearGradient>
+
+    <!-- Phone edge highlight -->
+    <linearGradient id="phoneEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4a4a50"/>
+      <stop offset="50%" stop-color="#3a3a40"/>
+      <stop offset="100%" stop-color="#2a2a30"/>
+    </linearGradient>
+
+    <!-- Recording indicator pulse -->
+    <radialGradient id="recPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff3b30" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#ff3b30" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff3b30" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Badge gradient -->
+    <linearGradient id="badgeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2840"/>
+      <stop offset="100%" stop-color="#0f1825"/>
+    </linearGradient>
+
+    <!-- Shield gradient -->
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a7bff"/>
+      <stop offset="100%" stop-color="#2055cc"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20"/>
+    </filter>
+
+    <filter id="subtleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+    </filter>
+
+    <filter id="tinyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+
+    <!-- Phone shadow -->
+    <filter id="phoneShadow" x="-30%" y="-10%" width="160%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="25"/>
+      <feOffset dx="0" dy="10"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Badge shadow -->
+    <filter id="badgeShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="3"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Screen reflection -->
+    <linearGradient id="screenReflect" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+
+    <!-- Clip path for screen content -->
+    <clipPath id="screenClip">
+      <rect x="678" y="148" width="244" height="528" rx="18"/>
+    </clipPath>
+
+    <!-- Clip path for Dynamic Island area -->
+    <clipPath id="islandClip">
+      <rect x="678" y="148" width="244" height="528" rx="18"/>
+    </clipPath>
+
+    <!-- Mountain silhouette clip -->
+    <clipPath id="mountainClip">
+      <rect x="678" y="148" width="244" height="528" rx="18"/>
+    </clipPath>
+
+    <!-- Floating particle glow -->
+    <radialGradient id="particleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4a8aff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#4a8aff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Focus ring gradient -->
+    <linearGradient id="focusRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a7bff" stop-opacity="0.15"/>
+      <stop offset="25%" stop-color="#5a4aff" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#3a7bff" stop-opacity="0.12"/>
+      <stop offset="75%" stop-color="#5a4aff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#3a7bff" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ========== BACKGROUND ========== -->
+  <rect width="1600" height="1000" fill="url(#bgGlow)"/>
+  
+  <!-- Ambient glow layers -->
+  <rect width="1600" height="1000" fill="url(#blueGlow)"/>
+  <rect width="1600" height="1000" fill="url(#purpleGlow)"/>
+  <rect width="1600" height="1000" fill="url(#topLight)"/>
+
+  <!-- Subtle background particles/dots -->
+  <circle cx="250" cy="200" r="1" fill="#4a8aff" opacity="0.15"/>
+  <circle cx="420" cy="350" r="0.8" fill="#6a7aff" opacity="0.12"/>
+  <circle cx="180" cy="600" r="1.2" fill="#4a8aff" opacity="0.1"/>
+  <circle cx="1350" cy="180" r="1" fill="#6a7aff" opacity="0.13"/>
+  <circle cx="1420" cy="450" r="0.8" fill="#4a8aff" opacity="0.11"/>
+  <circle cx="1200" cy="750" r="1.1" fill="#6a7aff" opacity="0.09"/>
+  <circle cx="350" cy="800" r="0.9" fill="#4a8aff" opacity="0.08"/>
+  <circle cx="1300" cy="850" r="1" fill="#6a7aff" opacity="0.1"/>
+  <circle cx="550" cy="150" r="0.7" fill="#4a8aff" opacity="0.12"/>
+  <circle cx="1100" cy="200" r="0.9" fill="#6a7aff" opacity="0.1"/>
+
+  <!-- Subtle concentric focus rings around phone -->
+  <ellipse cx="800" cy="420" rx="320" ry="340" fill="none" stroke="url(#focusRing)" stroke-width="0.5" opacity="0.3"/>
+  <ellipse cx="800" cy="420" rx="400" ry="420" fill="none" stroke="url(#focusRing)" stroke-width="0.4" opacity="0.2"/>
+  <ellipse cx="800" cy="420" rx="480" ry="500" fill="none" stroke="url(#focusRing)" stroke-width="0.3" opacity="0.12"/>
+
+  <!-- ========== PHONE GLOW (behind phone) ========== -->
+  <ellipse cx="800" cy="440" rx="200" ry="320" fill="#1a3a6a" opacity="0.15" filter="url(#softGlow)"/>
+  <ellipse cx="800" cy="420" rx="150" ry="280" fill="#2a4a7a" opacity="0.1" filter="url(#softGlow)"/>
+
+  <!-- ========== iPHONE ========== -->
+  <g filter="url(#phoneShadow)">
+    <!-- Phone body -->
+    <rect x="668" y="128" width="264" height="568" rx="32" fill="url(#phoneBody)" stroke="url(#phoneEdge)" stroke-width="1.5"/>
+    
+    <!-- Phone inner bezel -->
+    <rect x="672" y="132" width="256" height="560" rx="30" fill="#0a0a0c"/>
+    
+    <!-- Screen area -->
+    <g clip-path="url(#screenClip)">
+      <!-- Camera view - sky -->
+      <rect x="678" y="148" width="244" height="528" fill="url(#skyGradient)"/>
+      
+      <!-- Sun/golden hour glow -->
+      <rect x="678" y="148" width="244" height="528" fill="url(#sunGlow)"/>
+      
+      <!-- Clouds -->
+      <ellipse cx="750" cy="260" rx="60" ry="12" fill="#8fa5be" opacity="0.3"/>
+      <ellipse cx="770" cy="256" rx="40" ry="10" fill="#9ab0c8" opacity="0.25"/>
+      <ellipse cx="880" cy="290" rx="45" ry="8" fill="#8fa5be" opacity="0.2"/>
+      
+      <!-- Distant mountains -->
+      <polygon points="678,420 720,350 760,380 800,330 840,360 880,340 920,370 922,420" fill="#2a3d4a" opacity="0.7"/>
+      <polygon points="678,420 700,370 740,390 780,345 820,375 860,355 900,385 922,400 922,420" fill="#1e2d3a" opacity="0.8"/>
+      
+      <!-- Closer hills -->
+      <polygon points="678,420 690,400 730,410 770,390 810,405 850,395 890,410 922,400 922,450 678,450" fill="#1a3328" opacity="0.85"/>
+      
+      <!-- Foreground -->
+      <rect x="678" y="430" width="244" height="246" fill="#0f1a14"/>
+      
+      <!-- Subtle foreground grass texture lines -->
+      <line x1="690" y1="435" x2="695" y2="428" stroke="#1a2d1e" stroke-width="0.5" opacity="0.5"/>
+      <line x1="720" y1="438" x2="726" y2="430" stroke="#1a2d1e" stroke-width="0.5" opacity="0.4"/>
+      <line x1="810" y1="436" x2="815" y2="429" stroke="#1a2d1e" stroke-width="0.5" opacity="0.45"/>
+      <line x1="870" y1="434" x2="874" y2="427" stroke="#1a2d1e" stroke-width="0.5" opacity="0.4"/>
+      
+      <!-- Water/lake reflection -->
+      <ellipse cx="800" cy="460" rx="80" ry="10" fill="#2a4560" opacity="0.3"/>
+      <line x1="750" y1="458" x2="850" y2="458" stroke="#3a5570" stroke-width="0.3" opacity="0.3"/>
+      <line x1="760" y1="462" x2="840" y2="462" stroke="#3a5570" stroke-width="0.3" opacity="0.2"/>
+      
+      <!-- Screen reflection overlay -->
+      <rect x="678" y="148" width="244" height="528" fill="url(#screenReflect)"/>
+      
+      <!-- ===== MINIMAL UI OVERLAY ===== -->
+      
+      <!-- Dynamic Island -->
+      <rect x="776" y="156" width="48" height="16" rx="8" fill="#000000"/>
+      
+      <!-- Recording indicator - top left area -->
+      <!-- Red recording dot with glow -->
+      <circle cx="700" cy="182" r="8" fill="#ff3b30" opacity="0.2" filter="url(#tinyGlow)"/>
+      <circle cx="700" cy="182" r="3.5" fill="#ff3b30"/>
+      <circle cx="700" cy="182" r="2" fill="#ff6961" opacity="0.6"/>
+      
+      <!-- Recording timer -->
+      <text x="710" y="185" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="500" fill="#ffffff" opacity="0.9" letter-spacing="0.5">02:34</text>
+      
+      <!-- Subtle REC label -->
+      <text x="736" y="185" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="6" font-weight="600" fill="#ff3b30" opacity="0.7" letter-spacing="1">REC</text>
+
+      <!-- Top right - minimal battery/signal (very faint, iOS style) -->
+      <text x="890" y="185" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="7" fill="#ffffff" opacity="0.4" text-anchor="end">4:32</text>
+
+      <!-- Bottom safe area - very minimal controls -->
+      <!-- Just a subtle shutter/stop button indicator at bottom center -->
+      <circle cx="800" cy="640" r="24" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.25"/>
+      <rect x="790" y="630" width="20" height="20" rx="3" fill="#ff3b30" opacity="0.8"/>
+      
+      <!-- Subtle focus mode indicator bottom -->
+      <rect x="756" y="660" width="88" height="2" rx="1" fill="#ffffff" opacity="0.15"/>
+    </g>
+    
+    <!-- Phone frame highlights -->
+    <!-- Top edge highlight -->
+    <line x1="700" y1="129" x2="900" y2="129" stroke="#555558" stroke-width="0.5" opacity="0.3"/>
+    <!-- Side button (right) -->
+    <rect x="931" y="260" width="2" height="40" rx="1" fill="#2a2a2e" stroke="#3a3a40" stroke-width="0.5"/>
+    <!-- Volume buttons (left) -->
+    <rect x="667" y="240" width="2" height="28" rx="1" fill="#2a2a2e" stroke="#3a3a40" stroke-width="0.5"/>
+    <rect x="667" y="280" width="2" height="28" rx="1" fill="#2a2a2e" stroke="#3a3a40" stroke-width="0.5"/>
+    <!-- Silent switch -->
+    <rect x="667" y="210" width="2" height="14" rx="1" fill="#2a2a2e" stroke="#3a3a40" stroke-width="0.5"/>
+  </g>
+
+  <!-- ========== FLOATING VISUAL CUES ========== -->
+
+  <!-- LEFT SIDE: Privacy Shield Badge -->
+  <g filter="url(#badgeShadow)" transform="translate(440, 320)">
+    <!-- Badge background -->
+    <rect x="0" y="0" width="140" height="48" rx="24" fill="url(#badgeGrad)" stroke="#1e3050" stroke-width="0.5" opacity="0.9"/>
+    
+    <!-- Shield icon -->
+    <g transform="translate(18, 12)">
+      <path d="M12 2 L4 6 L4 12 C4 17 8 21 12 22 C16 21 20 17 20 12 L20 6 Z" 
+            fill="none" stroke="#3a7bff" stroke-width="1.5" 
+            transform="scale(0.8)" stroke-linejoin="round"/>
+      <!-- Checkmark in shield -->
+      <path d="M6.5 11 L9.5 14 L14.5 8" fill="none" stroke="#3a7bff" stroke-width="1.3" 
+            transform="scale(0.8)" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="44" y="21" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="600" fill="#ffffff" opacity="0.85" letter-spacing="0.3">Privacy First</text>
+    <text x="44" y="34" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="7.5" fill="#8a9ab5" letter-spacing="0.2">Encrypted locally</text>
+  </g>
+
+  <!-- Subtle connecting line from privacy badge to phone -->
+  <line x1="580" y1="344" x2="665" y2="370" stroke="#3a7bff" stroke-width="0.3" opacity="0.15"/>
+
+  <!-- RIGHT SIDE: Background Recording Badge -->
+  <g filter="url(#badgeShadow)" transform="translate(1020, 300)">
+    <!-- Badge background -->
+    <rect x="0" y="0" width="155" height="48" rx="24" fill="url(#badgeGrad)" stroke="#1e3050" stroke-width="0.5" opacity="0.9"/>
+    
+    <!-- Recording wave icon -->
+    <g transform="translate(16, 14)">
+      <!-- Circular arrow / continuous icon -->
+      <circle cx="10" cy="10" r="7" fill="none" stroke="#34c759" stroke-width="1.3" stroke-dasharray="30 12" stroke-linecap="round"/>
+      <!-- Inner dot -->
+      <circle cx="10" cy="10" r="2.5" fill="#34c759" opacity="0.8"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="44" y="21" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="600" fill="#ffffff" opacity="0.85" letter-spacing="0.3">Always Recording</text>
+    <text x="44" y="34" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="7.5" fill="#8a9ab5" letter-spacing="0.2">Runs in background</text>
+  </g>
+
+  <!-- Subtle connecting line from recording badge to phone -->
+  <line x1="1020" y1="324" x2="935" y2="350" stroke="#34c759" stroke-width="0.3" opacity="0.15"/>
+
+  <!-- BOTTOM LEFT: Focus Mode Badge -->
+  <g filter="url(#badgeShadow)" transform="translate(420, 530)">
+    <!-- Badge background -->
+    <rect x="0" y="0" width="165" height="48" rx="24" fill="url(#badgeGrad)" stroke="#1e3050" stroke-width="0.5" opacity="0.9"/>
+    
+    <!-- Moon/focus icon -->
+    <g transform="translate(16, 12)">
+      <!-- Crescent moon for focus/DND -->
+      <circle cx="10" cy="11" r="7" fill="none" stroke="#af8aff" stroke-width="1.3"/>
+      <circle cx="13" cy="9" r="5.5" fill="url(#badgeGrad)"/>
+      <!-- Small stars -->
+      <circle cx="17" cy="7" r="1" fill="#af8aff" opacity="0.7"/>
+      <circle cx="14" cy="4" r="0.7" fill="#af8aff" opacity="0.5"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="44" y="21" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="600" fill="#ffffff" opacity="0.85" letter-spacing="0.3">Distraction Free</text>
+    <text x="44" y="34" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="7.5" fill="#8a9ab5" letter-spacing="0.2">Screen dims for focus</text>
+  </g>
+
+  <!-- Subtle connecting line -->
+  <line x1="585" y1="554" x2="670" y2="520" stroke="#af8aff" stroke-width="0.3" opacity="0.15"/>
+
+  <!-- BOTTOM RIGHT: Lock Screen Badge -->
+  <g filter="url(#badgeShadow)" transform="translate(1030, 520)">
+    <!-- Badge background -->
+    <rect x="0" y="0" width="145" height="48" rx="24" fill="url(#badgeGrad)" stroke="#1e3050" stroke-width="0.5" opacity="0.9"/>
+    
+    <!-- Lock icon -->
+    <g transform="translate(16, 10)">
+      <rect x="5" y="12" width="12" height="10" rx="2" fill="none" stroke="#ff9f0a" stroke-width="1.3"/>
+      <path d="M8 12 L8 8 C8 5 14 5 14 8 L14 12" fill="none" stroke="#ff9f0a" stroke-width="1.3" stroke-linecap="round"/>
+      <!-- Keyhole -->
+      <circle cx="11" cy="17.5" r="1.5" fill="#ff9f0a" opacity="0.7"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="44" y="21" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="600" fill="#ffffff" opacity="0.85" letter-spacing="0.3">Screen Locked</text>
+    <text x="44" y="34" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="7.5" fill="#8a9ab5" letter-spacing="0.2">Recording continues</text>
+  </g>
+
+  <!-- Subtle connecting line -->
+  <line x1="1030" y1="544" x2="938" y2="510" stroke="#ff9f0a" stroke-width="0.3" opacity="0.15"/>
+
+  <!-- ========== BOTTOM HEADLINE TEXT ========== -->
+  
+  <!-- "Focus Mode" title -->
+  <text x="800" y="830" text-anchor="middle" font-family="-apple-system, SF Pro Display, Helvetica Neue, Arial, sans-serif" font-size="36" font-weight="600" fill="#ffffff" opacity="0.95" letter-spacing="-0.5">Focus Mode</text>
+  
+  <!-- Subtitle -->
+  <text x="800" y="862" text-anchor="middle" font-family="-apple-system, SF Pro Text, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#8a9ab5" letter-spacing="0.3">Record without distractions. Your screen dims. Your camera doesn't.</text>
+
+  <!-- ========== SUBTLE AMBIENT EFFECTS ========== -->
+  
+  <!-- Very faint light rays from phone screen -->
+  <line x1="800" y1="420" x2="600" y2="200" stroke="#4a6a9a" stroke-width="0.2" opacity="0.04"/>
+  <line x1="800" y1="420" x2="1000" y2="180" stroke="#4a6a9a" stroke-width="0.2" opacity="0.04"/>
+  <line x1="800" y1="420" x2="500" y2="500" stroke="#4a6a9a" stroke-width="0.2" opacity="0.03"/>
+  <line x1="800" y1="420" x2="1100" y2="480" stroke="#4a6a9a" stroke-width="0.2" opacity="0.03"/>
+
+  <!-- Additional ambient particles -->
+  <circle cx="380" cy="420" r="30" fill="url(#particleGlow)"/>
+  <circle cx="1220" cy="380" r="25" fill="url(#particleGlow)"/>
+  <circle cx="300" cy="700" r="20" fill="url(#particleGlow)"/>
+  <circle cx="1300" cy="650" r="22" fill="url(#particleGlow)"/>
+
+  <!-- Tiny floating dots for depth -->
+  <circle cx="320" cy="300" r="1.5" fill="#4a8aff" opacity="0.06"/>
+  <circle cx="500" cy="180" r="1" fill="#8a6aff" opacity="0.08"/>
+  <circle cx="1100" cy="150" r="1.2" fill="#4a8aff" opacity="0.07"/>
+  <circle cx="1280" cy="300" r="1" fill="#8a6aff" opacity="0.05"/>
+  <circle cx="200" cy="500" r="1.3" fill="#4a8aff" opacity="0.06"/>
+  <circle cx="1400" cy="550" r="1" fill="#8a6aff" opacity="0.07"/>
+  <circle cx="600" cy="900" r="1" fill="#4a8aff" opacity="0.05"/>
+  <circle cx="1000" cy="880" r="1.2" fill="#8a6aff" opacity="0.06"/>
+
+  <!-- Subtle vignette overlay -->
+  <rect width="1600" height="1000" fill="url(#bgGlow)" opacity="0.2"/>
+</svg>

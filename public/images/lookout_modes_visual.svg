@@ -1,0 +1,478 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100">
+  <defs>
+    <!-- Dark gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d1529;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#060a14;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Subtle radial glow -->
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" style="stop-color:#1a2744;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#0a0e1a;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- iPhone bezel gradient -->
+    <linearGradient id="bezelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1c1c1e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a2a2e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- iPhone bezel edge highlight -->
+    <linearGradient id="bezelEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a4a4e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3a3a3e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a4a4e;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Landscape scene gradient (back camera) -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90d9;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#6ba3e0;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#87b5e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a8c8eb;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Sunset sky variant -->
+    <linearGradient id="skyGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d7cc9;stop-opacity:1" />
+      <stop offset="35%" style="stop-color:#5a94d4;stop-opacity:1" />
+      <stop offset="65%" style="stop-color:#7aabdf;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9ec2e8;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="skyGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4488cc;stop-opacity:1" />
+      <stop offset="45%" style="stop-color:#66a0d8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#88b8e4;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Face/selfie gradient -->
+    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c2c2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1c1c1e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Skin tone gradient -->
+    <radialGradient id="skinGrad" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" style="stop-color:#e8c4a0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4a882;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="skinGrad2" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" style="stop-color:#e0bc98;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cca07a;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Recording dot pulse -->
+    <radialGradient id="recDot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff3b30;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#ff3b30;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#ff3b30;stop-opacity:0.5" />
+    </radialGradient>
+    
+    <!-- Recording dot glow -->
+    <radialGradient id="recGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff3b30;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#ff3b30;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Label pill gradient -->
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.18)" />
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.08)" />
+    </linearGradient>
+    
+    <!-- Mountain shadow -->
+    <linearGradient id="mountainShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d6e3d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a2d;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Grass gradient -->
+    <linearGradient id="grassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a8c4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a7a3a;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Phone shadow filter -->
+    <filter id="phoneShadow" x="-15%" y="-10%" width="130%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    
+    <!-- Soft inner shadow for screens -->
+    <filter id="screenGlow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.05"/>
+    </filter>
+    
+    <!-- PiP shadow -->
+    <filter id="pipShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    
+    <!-- Text shadow -->
+    <filter id="textShadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Clip paths for iPhone screens -->
+    <clipPath id="screen1">
+      <rect x="165" y="198" width="248" height="538" rx="20" ry="20"/>
+    </clipPath>
+    <clipPath id="screen2">
+      <rect x="576" y="198" width="248" height="538" rx="20" ry="20"/>
+    </clipPath>
+    <clipPath id="screen3">
+      <rect x="987" y="198" width="248" height="538" rx="20" ry="20"/>
+    </clipPath>
+    
+    <!-- Dynamic Island clip -->
+    <clipPath id="dynamicIsland1">
+      <rect x="244" y="205" width="90" height="24" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="dynamicIsland2">
+      <rect x="655" y="205" width="90" height="24" rx="12" ry="12"/>
+    </clipPath>
+    <clipPath id="dynamicIsland3">
+      <rect x="1066" y="205" width="90" height="24" rx="12" ry="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- ======================== BACKGROUND ======================== -->
+  <rect width="1600" height="1100" fill="url(#bgGrad)"/>
+  <rect width="1600" height="1100" fill="url(#centerGlow)"/>
+  
+  <!-- Subtle grid/noise texture dots -->
+  <g opacity="0.02">
+    <circle cx="200" cy="200" r="1" fill="white"/>
+    <circle cx="400" cy="300" r="0.8" fill="white"/>
+    <circle cx="600" cy="150" r="1.2" fill="white"/>
+    <circle cx="800" cy="400" r="0.6" fill="white"/>
+    <circle cx="1000" cy="250" r="1" fill="white"/>
+    <circle cx="1200" cy="350" r="0.8" fill="white"/>
+    <circle cx="1400" cy="200" r="1.1" fill="white"/>
+    <circle cx="300" cy="500" r="0.7" fill="white"/>
+    <circle cx="700" cy="600" r="0.9" fill="white"/>
+    <circle cx="1100" cy="550" r="1" fill="white"/>
+    <circle cx="1300" cy="650" r="0.8" fill="white"/>
+    <circle cx="500" cy="700" r="1.2" fill="white"/>
+    <circle cx="900" cy="750" r="0.6" fill="white"/>
+  </g>
+
+  <!-- ======================== PHONE 1: SPLIT MODE ======================== -->
+  <g filter="url(#phoneShadow)">
+    <!-- Phone body -->
+    <rect x="152" y="178" width="274" height="578" rx="36" ry="36" fill="url(#bezelEdge)"/>
+    <rect x="155" y="181" width="268" height="572" rx="34" ry="34" fill="url(#bezelGrad)"/>
+    
+    <!-- Screen area -->
+    <rect x="165" y="198" width="248" height="538" rx="20" ry="20" fill="#000"/>
+    
+    <!-- SPLIT MODE CONTENT -->
+    <g clip-path="url(#screen1)">
+      <!-- Top half: Landscape/outdoor scene (back camera) -->
+      <rect x="165" y="198" width="248" height="269" fill="url(#skyGrad)"/>
+      
+      <!-- Clouds -->
+      <ellipse cx="220" cy="260" rx="30" ry="12" fill="white" opacity="0.5"/>
+      <ellipse cx="240" cy="258" rx="25" ry="10" fill="white" opacity="0.6"/>
+      <ellipse cx="350" cy="280" rx="22" ry="9" fill="white" opacity="0.4"/>
+      <ellipse cx="365" cy="278" rx="18" ry="8" fill="white" opacity="0.45"/>
+      
+      <!-- Mountains -->
+      <polygon points="165,467 210,340 260,390 310,320 360,380 413,350 413,467" fill="#3a7a3a" opacity="0.7"/>
+      <polygon points="165,467 195,370 240,410 290,350 340,400 380,360 413,390 413,467" fill="#4a8c4a" opacity="0.8"/>
+      
+      <!-- Trees silhouettes -->
+      <g opacity="0.6">
+        <polygon points="180,430 185,395 190,430" fill="#2d5a2d"/>
+        <polygon points="200,440 207,400 214,440" fill="#2d5a2d"/>
+        <polygon points="370,425 376,388 382,425" fill="#2d5a2d"/>
+        <polygon points="390,435 395,402 400,435" fill="#2d5a2d"/>
+      </g>
+      
+      <!-- Foreground grass -->
+      <rect x="165" y="440" width="248" height="27" fill="#4a8c4a"/>
+      <rect x="165" y="455" width="248" height="12" fill="#3d7a3d"/>
+      
+      <!-- Divider line -->
+      <rect x="165" y="464" width="248" height="3" fill="#1c1c1e" opacity="0.9"/>
+      <rect x="165" y="465" width="248" height="1" fill="rgba(255,255,255,0.15)"/>
+      
+      <!-- Bottom half: Front camera face -->
+      <rect x="165" y="467" width="248" height="269" fill="url(#faceGrad)"/>
+      
+      <!-- Blurred background suggestion -->
+      <rect x="165" y="467" width="248" height="269" fill="#252528"/>
+      
+      <!-- Person silhouette/avatar - face -->
+      <ellipse cx="289" cy="570" rx="42" ry="50" fill="url(#skinGrad)"/>
+      
+      <!-- Hair -->
+      <ellipse cx="289" cy="545" rx="46" ry="35" fill="#3a2a1a"/>
+      <ellipse cx="289" cy="530" rx="42" ry="28" fill="#3a2a1a"/>
+      
+      <!-- Face features -->
+      <ellipse cx="275" cy="568" rx="4" ry="3" fill="#8a7060"/>
+      <ellipse cx="303" cy="568" rx="4" ry="3" fill="#8a7060"/>
+      <path d="M282,585 Q289,592 296,585" fill="none" stroke="#b08870" stroke-width="1.5" stroke-linecap="round"/>
+      
+      <!-- Shoulders -->
+      <ellipse cx="289" cy="650" rx="55" ry="35" fill="#5a5a6a"/>
+      
+      <!-- Neck -->
+      <rect x="276" y="615" width="26" height="25" rx="5" fill="#d4a882"/>
+      
+      <!-- Subtle clothing collar -->
+      <path d="M250,640 Q289,625 328,640" fill="none" stroke="#4a4a5a" stroke-width="2"/>
+    </g>
+    
+    <!-- Dynamic Island -->
+    <rect x="244" y="205" width="90" height="24" rx="12" ry="12" fill="#000"/>
+    
+    <!-- Status bar elements - top -->
+    <text x="178" y="218" font-family="-apple-system,SF Pro Text,Helvetica Neue,sans-serif" font-size="10" fill="white" opacity="0.8" font-weight="600">9:41</text>
+    <g transform="translate(378,208)" opacity="0.8">
+      <!-- Battery -->
+      <rect x="0" y="2" width="18" height="9" rx="2" ry="2" fill="none" stroke="white" stroke-width="1"/>
+      <rect x="18" y="4.5" width="2" height="4" rx="1" fill="white" opacity="0.4"/>
+      <rect x="1.5" y="3.5" width="13" height="6" rx="1" fill="white"/>
+      <!-- Signal -->
+      <rect x="-30" y="7" width="3" height="4" rx="0.5" fill="white"/>
+      <rect x="-25" y="5" width="3" height="6" rx="0.5" fill="white"/>
+      <rect x="-20" y="3" width="3" height="8" rx="0.5" fill="white"/>
+      <rect x="-15" y="1" width="3" height="10" rx="0.5" fill="white"/>
+    </g>
+    
+    <!-- Split mode label on screen -->
+    <rect x="258" y="447" width="62" height="20" rx="10" fill="rgba(0,0,0,0.55)"/>
+    <rect x="258" y="447" width="62" height="20" rx="10" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+    <text x="289" y="461" font-family="-apple-system,SF Pro Display,Helvetica Neue,sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="500" letter-spacing="0.3">SPLIT</text>
+    
+    <!-- Recording indicator -->
+    <circle cx="180" cy="722" r="5" fill="url(#recDot)"/>
+    <circle cx="180" cy="722" r="9" fill="url(#recGlow)"/>
+    <text x="192" y="726" font-family="-apple-system,SF Pro Text,Helvetica Neue,sans-serif" font-size="9" fill="#ff3b30" font-weight="600" opacity="0.9">02:34</text>
+    
+    <!-- Home indicator -->
+    <rect x="254" y="720" width="70" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+  </g>
+
+  <!-- ======================== PHONE 2: PIP MODE ======================== -->
+  <g filter="url(#phoneShadow)">
+    <!-- Phone body -->
+    <rect x="563" y="178" width="274" height="578" rx="36" ry="36" fill="url(#bezelEdge)"/>
+    <rect x="566" y="181" width="268" height="572" rx="34" ry="34" fill="url(#bezelGrad)"/>
+    
+    <!-- Screen area -->
+    <rect x="576" y="198" width="248" height="538" rx="20" ry="20" fill="#000"/>
+    
+    <!-- PIP MODE CONTENT -->
+    <g clip-path="url(#screen2)">
+      <!-- Full screen: Landscape scene (back camera) -->
+      <rect x="576" y="198" width="248" height="538" fill="url(#skyGrad2)"/>
+      
+      <!-- Clouds -->
+      <ellipse cx="640" cy="280" rx="28" ry="11" fill="white" opacity="0.45"/>
+      <ellipse cx="658" cy="278" rx="22" ry="9" fill="white" opacity="0.55"/>
+      <ellipse cx="750" cy="300" rx="20" ry="8" fill="white" opacity="0.35"/>
+      <ellipse cx="765" cy="298" rx="16" ry="7" fill="white" opacity="0.4"/>
+      
+      <!-- Sun glow -->
+      <circle cx="770" cy="310" r="30" fill="#ffd700" opacity="0.15"/>
+      <circle cx="770" cy="310" r="18" fill="#ffd700" opacity="0.2"/>
+      
+      <!-- Mountains - layered -->
+      <polygon points="576,560 620,400 670,450 720,380 770,430 810,370 824,420 824,560" fill="#3a7a3a" opacity="0.5"/>
+      <polygon points="576,580 610,440 660,480 710,420 750,460 790,410 824,450 824,580" fill="#4a8c4a" opacity="0.65"/>
+      <polygon points="576,620 630,500 680,530 730,490 780,520 824,500 824,620" fill="#5a9a5a" opacity="0.75"/>
+      
+      <!-- Rolling hills -->
+      <ellipse cx="640" cy="620" rx="120" ry="50" fill="#5a9a5a" opacity="0.6"/>
+      <ellipse cx="760" cy="630" rx="100" ry="45" fill="#4a8c4a" opacity="0.7"/>
+      
+      <!-- Trees -->
+      <g opacity="0.5">
+        <polygon points="595,580 601,540 607,580" fill="#2d5a2d"/>
+        <polygon points="615,590 622,545 629,590" fill="#2d5a2d"/>
+        <polygon points="790,570 796,530 802,570" fill="#2d5a2d"/>
+        <polygon points="808,585 813,548 818,585" fill="#2d5a2d"/>
+      </g>
+      
+      <!-- Foreground meadow -->
+      <rect x="576" y="610" width="248" height="130" fill="#4a8c4a"/>
+      <rect x="576" y="650" width="248" height="90" fill="#3d7a3d" opacity="0.6"/>
+      
+      <!-- Path/trail -->
+      <path d="M680,740 Q695,680 710,650 Q720,630 700,610" fill="none" stroke="#c4a060" stroke-width="4" opacity="0.3"/>
+      
+      <!-- PiP overlay - front camera face -->
+      <g filter="url(#pipShadow)">
+        <rect x="735" y="630" width="78" height="95" rx="14" ry="14" fill="#252528"/>
+        <rect x="735" y="630" width="78" height="95" rx="14" ry="14" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+        
+        <!-- Person face in PiP -->
+        <clipPath id="pipClip">
+          <rect x="735" y="630" width="78" height="95" rx="14" ry="14"/>
+        </clipPath>
+        <g clip-path="url(#pipClip)">
+          <rect x="735" y="630" width="78" height="95" fill="#2a2a2e"/>
+          
+          <!-- Face -->
+          <ellipse cx="774" cy="672" rx="22" ry="26" fill="url(#skinGrad2)"/>
+          
+          <!-- Hair -->
+          <ellipse cx="774" cy="658" rx="24" ry="18" fill="#3a2a1a"/>
+          <ellipse cx="774" cy="650" rx="22" ry="14" fill="#3a2a1a"/>
+          
+          <!-- Eyes -->
+          <ellipse cx="766" cy="670" rx="2.5" ry="1.8" fill="#8a7060"/>
+          <ellipse cx="782" cy="670" rx="2.5" ry="1.8" fill="#8a7060"/>
+          
+          <!-- Mouth -->
+          <path d="M769,682 Q774,687 779,682" fill="none" stroke="#b08870" stroke-width="1" stroke-linecap="round"/>
+          
+          <!-- Shoulders -->
+          <ellipse cx="774" cy="715" rx="30" ry="18" fill="#5a5a6a"/>
+          
+          <!-- Neck -->
+          <rect x="768" y="695" width="12" height="13" rx="3" fill="#cca07a"/>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Dynamic Island -->
+    <rect x="655" y="205" width="90" height="24" rx="12" ry="12" fill="#000"/>
+    
+    <!-- Status bar elements -->
+    <text x="589" y="218" font-family="-apple-system,SF Pro Text,Helvetica Neue,sans-serif" font-size="10" fill="white" opacity="0.8" font-weight="600">9:41</text>
+    <g transform="translate(789,208)" opacity="0.8">
+      <rect x="0" y="2" width="18" height="9" rx="2" ry="2" fill="none" stroke="white" stroke-width="1"/>
+      <rect x="18" y="4.5" width="2" height="4" rx="1" fill="white" opacity="0.4"/>
+      <rect x="1.5" y="3.5" width="13" height="6" rx="1" fill="white"/>
+      <rect x="-30" y="7" width="3" height="4" rx="0.5" fill="white"/>
+      <rect x="-25" y="5" width="3" height="6" rx="0.5" fill="white"/>
+      <rect x="-20" y="3" width="3" height="8" rx="0.5" fill="white"/>
+      <rect x="-15" y="1" width="3" height="10" rx="0.5" fill="white"/>
+    </g>
+    
+    <!-- PiP mode label on screen -->
+    <rect x="592" y="700" width="52" height="20" rx="10" fill="rgba(0,0,0,0.55)"/>
+    <rect x="592" y="700" width="52" height="20" rx="10" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+    <text x="618" y="714" font-family="-apple-system,SF Pro Display,Helvetica Neue,sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="500" letter-spacing="0.3">PiP</text>
+    
+    <!-- Recording indicator -->
+    <circle cx="591" cy="722" r="5" fill="url(#recDot)"/>
+    <circle cx="591" cy="722" r="9" fill="url(#recGlow)"/>
+    <text x="603" y="726" font-family="-apple-system,SF Pro Text,Helvetica Neue,sans-serif" font-size="9" fill="#ff3b30" font-weight="600" opacity="0.9">01:47</text>
+    
+    <!-- Home indicator -->
+    <rect x="665" y="720" width="70" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+  </g>
+
+  <!-- ======================== PHONE 3: FOCUS MODE ======================== -->
+  <g filter="url(#phoneShadow)">
+    <!-- Phone body -->
+    <rect x="974" y="178" width="274" height="578" rx="36" ry="36" fill="url(#bezelEdge)"/>
+    <rect x="977" y="181" width="268" height="572" rx="34" ry="34" fill="url(#bezelGrad)"/>
+    
+    <!-- Screen area -->
+    <rect x="987" y="198" width="248" height="538" rx="20" ry="20" fill="#000"/>
+    
+    <!-- FOCUS MODE CONTENT -->
+    <g clip-path="url(#screen3)">
+      <!-- Full screen: Clean landscape (back camera only) -->
+      <rect x="987" y="198" width="248" height="538" fill="url(#skyGrad3)"/>
+      
+      <!-- High clouds, wispy -->
+      <ellipse cx="1050" cy="270" rx="35" ry="8" fill="white" opacity="0.3"/>
+      <ellipse cx="1070" cy="268" rx="28" ry="6" fill="white" opacity="0.35"/>
+      <ellipse cx="1160" cy="290" rx="25" ry="7" fill="white" opacity="0.25"/>
+      <ellipse cx="1175" cy="288" rx="20" ry="6" fill="white" opacity="0.3"/>
+      <ellipse cx="1100" cy="310" rx="18" ry="5" fill="white" opacity="0.2"/>
+      
+      <!-- Distant mountains - very soft -->
+      <polygon points="987,520 1030,380 1070,420 1110,360 1150,400 1190,350 1235,390 1235,520" fill="#4a8a5a" opacity="0.4"/>
+      <polygon points="987,550 1020,430 1060,460 1100,400 1140,440 1180,390 1235,430 1235,550" fill="#5a9a6a" opacity="0.55"/>
+      
+      <!-- Mid-ground hills -->
+      <ellipse cx="1050" cy="560" rx="110" ry="55" fill="#5a9a5a" opacity="0.6"/>
+      <ellipse cx="1170" cy="570" rx="90" ry="50" fill="#4a8c4a" opacity="0.65"/>
+      
+      <!-- Trees -->
+      <g opacity="0.45">
+        <polygon points="1000,550 1006,510 1012,550" fill="#2d5a2d"/>
+        <polygon points="1020,555 1027,512 1034,555" fill="#2d5a2d"/>
+        <polygon points="1200,545 1206,505 1212,545" fill="#2d5a2d"/>
+        <polygon points="1218,555 1223,518 1228,555" fill="#2d5a2d"/>
+      </g>
+      
+      <!-- Lake/water -->
+      <ellipse cx="1111" cy="610" rx="100" ry="25" fill="#4a90d9" opacity="0.35"/>
+      <line x1="1040" y1="605" x2="1080" y2="607" stroke="white" stroke-width="0.5" opacity="0.15"/>
+      <line x1="1100" y1="612" x2="1140" y2="610" stroke="white" stroke-width="0.5" opacity="0.12"/>
+      
+      <!-- Foreground -->
+      <rect x="987" y="620" width="248" height="120" fill="#4a8c4a"/>
+      <rect x="987" y="660" width="248" height="80" fill="#3d7a3d" opacity="0.5"/>
+      
+      <!-- Subtle wildflowers -->
+      <circle cx="1010" cy="650" r="2" fill="#e8d44d" opacity="0.4"/>
+      <circle cx="1030" cy="660" r="1.5" fill="#e8d44d" opacity="0.35"/>
+      <circle cx="1200" cy="645" r="2" fill="#d4609a" opacity="0.35"/>
+      <circle cx="1215" cy="658" r="1.5" fill="#d4609a" opacity="0.3"/>
+    </g>
+    
+    <!-- Dynamic Island -->
+    <rect x="1066" y="205" width="90" height="24" rx="12" ry="12" fill="#000"/>
+    
+    <!-- Status bar elements -->
+    <text x="1000" y="218" font-family="-apple-system,SF Pro Text,Helvetica Neue,sans-serif" font-size="10" fill="white" opacity="0.8" font-weight="600">9:41</text>
+    <g transform="translate(1200,208)" opacity="0.8">
+      <rect x="0" y="2" width="18" height="9" rx="2" ry="2" fill="none" stroke="white" stroke-width="1"/>
+      <rect x="18" y="4.5" width="2" height="4" rx="1" fill="white" opacity="0.4"/>
+      <rect x="1.5" y="3.5" width="13" height="6" rx="1" fill="white"/>
+      <rect x="-30" y="7" width="3" height="4" rx="0.5" fill="white"/>
+      <rect x="-25" y="5" width="3" height="6" rx="0.5" fill="white"/>
+      <rect x="-20" y="3" width="3" height="8" rx="0.5" fill="white"/>
+      <rect x="-15" y="1" width="3" height="10" rx="0.5" fill="white"/>
+    </g>
+    
+    <!-- Focus mode - minimal, clean UI -->
+    <!-- Only a subtle recording dot in top area -->
+    <circle cx="1005" cy="243" r="4" fill="url(#recDot)"/>
+    <circle cx="1005" cy="243" r="7" fill="url(#recGlow)"/>
+    <text x="1015" y="247" font-family="-apple-system,SF Pro Text,Helvetica Neue,sans-serif" font-size="9" fill="white" font-weight="500" opacity="0.7">05:12</text>
+    
+    <!-- Home indicator -->
+    <rect x="1076" y="720" width="70" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+  </g>
+
+  <!-- ======================== MODE LABELS BELOW PHONES ======================== -->
+  
+  <!-- Split label -->
+  <text x="289" y="810" font-family="-apple-system,SF Pro Display,Helvetica Neue,sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="600" letter-spacing="0.5" opacity="0.95">Split</text>
+  <text x="289" y="832" font-family="-apple-system,SF Pro Text,Helvetica Neue,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="400" opacity="0.45">Both cameras, side by side</text>
+  
+  <!-- PiP label -->
+  <text x="700" y="810" font-family="-apple-system,SF Pro Display,Helvetica Neue,sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="600" letter-spacing="0.5" opacity="0.95">Picture in Picture</text>
+  <text x="700" y="832" font-family="-apple-system,SF Pro Text,Helvetica Neue,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="400" opacity="0.45">Floating selfie overlay</text>
+  
+  <!-- Focus label -->
+  <text x="1111" y="810" font-family="-apple-system,SF Pro Display,Helvetica Neue,sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="600" letter-spacing="0.5" opacity="0.95">Focus</text>
+  <text x="1111" y="832" font-family="-apple-system,SF Pro Text,Helvetica Neue,sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="400" opacity="0.45">Single camera, zero distractions</text>
+
+  <!-- ======================== SUBTLE DECORATIVE ELEMENTS ======================== -->
+  
+  <!-- Thin separator dots between phones -->
+  <circle cx="445" cy="470" r="2" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="445" cy="490" r="2" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="445" cy="510" r="2" fill="rgba(255,255,255,0.04)"/>
+  
+  <circle cx="856" cy="470" r="2" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="856" cy="490" r="2" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="856" cy="510" r="2" fill="rgba(255,255,255,0.04)"/>
+  
+</svg>
