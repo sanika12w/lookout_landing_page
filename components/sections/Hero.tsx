@@ -12,6 +12,12 @@ export function Hero() {
     <section className="hero-section relative flex w-full flex-col items-center justify-center px-5" aria-labelledby="home-hero">
       <div className="aurora aurora-a" />
       <div className="aurora aurora-b" />
+      <div className="light-streaks" />
+      <div className="particles">
+        {[...Array(6)].map((_, i) => (
+          <div key={i} className={`particle particle-${i}`} />
+        ))}
+      </div>
       <div className="grid-noise" />
       <div className="hero-grid mx-auto grid w-full max-w-7xl items-center">
         <div className="hero-content relative z-10">
@@ -25,7 +31,7 @@ export function Hero() {
               Lookout records front and rear cameras simultaneously for split-screen vlogs, reactions,
               travel POVs, demos, and social clips, with Apple Watch control built in.
             </p>
-            <div className="hero-cta-group mt-6 flex flex-row gap-3 w-full max-w-[420px]">
+            <div className="hero-cta-group mt-8 flex flex-row items-center gap-3 w-full max-w-[420px]">
               <AppStoreButton />
               <Link href="/#showcase" className="secondary-button flex-1">
                 <CirclePlay className="h-5 w-5" />
@@ -37,7 +43,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18, duration: 0.45 }}
-            className="hero-stats mt-6 grid max-w-xl grid-cols-3 gap-2"
+            className="hero-stats mt-10 grid max-w-xl grid-cols-3 gap-2"
           >
             {["iPhone", "Apple Watch", "macOS"].map((item) => (
               <div key={item} className="stat-card">
@@ -46,7 +52,7 @@ export function Hero() {
             ))}
           </m.div>
         </div>
-        <div className="hero-phone-stage relative w-full" style={{ containerType: "size" }}>
+        <div className="hero-phone-stage relative w-full">
           <div className="hero-orbit orbit-one" />
           <div className="hero-orbit orbit-two" />
           <m.div

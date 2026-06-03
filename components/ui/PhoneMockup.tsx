@@ -59,12 +59,12 @@ export function PhoneMockup({ hero = false, mode = "Split" }: { hero?: boolean; 
           <div className="camera-grid">
             <div className="lens rear">
               <Image
-                src={renderedMode === "Focus" ? "/images/lookout/lookout-focus-interface.webp" : "/images/lookout/lookout-rear-scene.webp"}
-                alt={renderedMode === "Focus" ? "Dimmed Focus recording interface" : "Rear camera city point of view"}
+                src={renderedMode === "Focus" ? "/images/lookout/lookout-creator-camera.webp" : "/images/lookout/lookout-rear-scene.webp"}
+                alt={renderedMode === "Focus" ? "Creator camera focus view" : "Rear camera city point of view"}
                 fill
                 sizes={hero ? "(max-width: 768px) 74vw, 390px" : "330px"}
                 priority={hero}
-                className={renderedMode === "Focus" ? "lens-image object-contain" : "lens-image"}
+                className="lens-image"
               />
               {renderedMode !== "Focus" && <div className="scanline" />}
               {renderedMode !== "Focus" && <span>REAR</span>}

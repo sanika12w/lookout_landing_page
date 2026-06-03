@@ -40,10 +40,10 @@
   --shadow: rgba(0, 0, 0, .34);
   --shadow-strong: rgba(0, 0, 0, .55);
   --body-bg:
-    radial-gradient(circle at 42% -16%, rgba(125, 249, 255, .24), transparent 34rem),
-    radial-gradient(circle at 92% 18%, rgba(255, 107, 214, .17), transparent 30rem),
-    radial-gradient(circle at 12% 64%, rgba(255, 210, 138, .075), transparent 32rem),
-    linear-gradient(180deg, #070a12 0%, #030408 38%, #0a0b12 72%, #040509 100%);
+    radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15), transparent 50rem),
+    radial-gradient(circle at 90% 20%, rgba(217, 70, 239, 0.08), transparent 40rem),
+    radial-gradient(circle at 10% 40%, rgba(125, 249, 255, 0.06), transparent 45rem),
+    linear-gradient(180deg, #020205 0%, #05050f 35%, #080718 70%, #030208 100%);
 }
 
 * {
@@ -374,34 +374,34 @@ button {
 .hero-section {
   min-height: 100svh;
   overflow: hidden;
-  padding-top: clamp(7rem, 12svh, 9rem);
-  padding-bottom: clamp(2.25rem, 5svh, 4.5rem);
+  padding-top: clamp(8rem, 15svh, 11rem);
+  padding-bottom: clamp(4rem, 10svh, 7rem);
 }
 
 .hero-grid {
-  min-height: calc(100svh - clamp(9.25rem, 17svh, 13.5rem));
-  grid-template-columns: minmax(0, 1.02fr) minmax(340px, .98fr);
-  gap: clamp(2rem, 4vw, 4.5rem);
+  min-height: calc(100svh - clamp(12rem, 25svh, 18rem));
+  grid-template-columns: minmax(0, 1.3fr) minmax(240px, 0.7fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
 }
 
 .hero-content {
-  max-width: 42rem;
+  max-width: 38rem;
 }
 
 .hero-title {
-  max-width: 12.5ch;
+  max-width: 30ch;
   color: var(--text);
-  font-size: clamp(2.35rem, 4.35vw, 4.05rem);
+  font-size: clamp(2.4rem, 4.6vw, 3.85rem);
   font-weight: 650;
-  line-height: 1.03;
+  line-height: 1.05;
 }
 
 .hero-copy {
-  max-width: 38rem;
-  margin-top: 1rem;
+  max-width: 36rem;
+  margin-top: 1.5rem;
   color: var(--muted);
   font-size: clamp(.96rem, 1.2vw, 1.08rem);
-  line-height: 1.58;
+  line-height: 1.65;
 }
 
 .hero-badge,
@@ -417,10 +417,10 @@ button {
 }
 
 .hero-badge {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 999px;
-  padding: .4rem .85rem;
-  font-size: .815rem;
+  padding: .45rem 1rem;
+  font-size: .92rem;
 }
 
 .secondary-button {
@@ -448,7 +448,12 @@ button {
 }
 
 .hero-phone-stage {
-  min-height: min(620px, calc(100svh - 8rem));
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-phone-wrap {
@@ -499,19 +504,19 @@ button {
 }
 
 .aurora-a {
-  width: 42rem;
-  height: 42rem;
-  left: -11rem;
-  top: 4rem;
-  background: radial-gradient(circle, rgba(34, 211, 238, .35), transparent 62%);
+  width: 48rem;
+  height: 48rem;
+  left: -14rem;
+  top: -6rem;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.22) 0%, rgba(125, 249, 255, 0.08) 50%, transparent 70%);
 }
 
 .aurora-b {
-  width: 45rem;
-  height: 45rem;
-  right: -10rem;
-  top: 8rem;
-  background: radial-gradient(circle, rgba(217, 70, 239, .26), transparent 64%);
+  width: 52rem;
+  height: 52rem;
+  right: -15rem;
+  top: 4rem;
+  background: radial-gradient(circle, rgba(217, 70, 239, 0.18) 0%, rgba(147, 51, 234, 0.08) 55%, transparent 70%);
 }
 
 .grid-noise {
@@ -727,7 +732,7 @@ button {
 .screen {
   position: absolute;
   inset: 0;
-  padding: clamp(36px, 8.5%, 60px) 16px 18px;
+  padding: clamp(28px, 6.5%, 44px) 10px 12px;
   background:
     radial-gradient(circle at 30% 20%, rgba(34,211,238,.20), transparent 32%),
     radial-gradient(circle at 80% 78%, rgba(217,70,239,.16), transparent 30%),
@@ -755,7 +760,7 @@ button {
   z-index: 1;
   height: 72%;
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .lens {
@@ -765,9 +770,9 @@ button {
   min-height: 0;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 18px;
+  padding: 12px;
   border: 1px solid rgba(255,255,255,.12);
-  border-radius: 30px;
+  border-radius: 22px;
 }
 
 .lens-image {
@@ -833,8 +838,8 @@ button {
 
 .phone-screen-pip .selfie {
   position: absolute;
-  right: 5%;
-  bottom: 22%;
+  right: 4%;
+  bottom: 18%;
   width: 42%;
   height: 24%;
   z-index: 3;
@@ -858,10 +863,11 @@ button {
 
 .phone-screen-focus .rear {
   position: absolute !important;
-  inset: 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  background: transparent !important;
+  inset: 52px 14px 84px 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  background: #07080d !important;
   filter: brightness(.85) saturate(.95) !important;
 }
 
@@ -1770,21 +1776,23 @@ button {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, .98fr) minmax(330px, 1.02fr);
+    grid-template-columns: minmax(0, 1.25fr) minmax(240px, 0.75fr);
     gap: clamp(1.6rem, 3vw, 3rem);
   }
 
   .hero-title {
-    font-size: clamp(2.2rem, 3.8vw, 3.42rem);
-    max-width: 12.2ch;
+    font-size: clamp(2.4rem, 5.2vw, 4.5rem);
+    max-width: 40ch;
   }
 
   .hero-copy {
-    max-width: 35rem;
+    max-width: 38rem;
   }
 
   .phone-hero {
-    width: min(380px, 36vw);
+    height: clamp(400px, 40vh, 380px);
+    width: auto;
+    aspect-ratio: 9 / 19.4;
   }
 }
 
@@ -1806,6 +1814,32 @@ button {
   .creator-panel {
     padding: 4rem;
   }
+
+  .hero-phone-stage {
+    min-height: 0;
+    height: 100%;
+  }
+
+  .phone-hero {
+    height: clamp(400px, 44vh, 420px);
+    width: auto;
+    aspect-ratio: 9 / 19.4;
+  }
+
+
+
+  .app-store-button,
+  .secondary-button {
+    height: 3.15rem;
+    padding: 0 1.25rem;
+    font-size: .84rem;
+  }
+
+  .stat-card {
+    min-height: 42px;
+    border-radius: 20px;
+    font-size: 12.5px;
+  }
 }
 
 @media (max-width: 959px) {
@@ -1824,7 +1858,7 @@ button {
   }
 
   .hero-content {
-    max-width: 42rem;
+    max-width: 48rem;
     text-align: center;
   }
 
@@ -1835,13 +1869,13 @@ button {
   }
 
   .hero-title {
-    max-width: 14ch;
+    max-width: 36ch;
     font-size: clamp(2.2rem, 7vw, 3.4rem);
   }
 
   .hero-copy {
-    max-width: 36rem;
-    margin-top: .9rem;
+    max-width: 38rem;
+    margin-top: 1.2rem;
   }
 
   .hero-cta-group,
@@ -1860,7 +1894,7 @@ button {
   }
 
   .phone-hero {
-    width: min(360px, 54vw);
+    /* width: min(300px, 58vw); */
   }
 
   .nav-shell {
@@ -1896,18 +1930,18 @@ button {
   }
 
   .hero-content {
-    max-width: 23rem;
+    max-width: 28rem;
   }
 
   .hero-title {
-    max-width: 12.5ch;
+    max-width: 30ch;
     font-size: clamp(1.85rem, 8.2vw, 2.35rem);
     line-height: 1.08;
   }
 
   .hero-copy {
-    max-width: 21.5rem;
-    margin-top: .7rem;
+    max-width: 26rem;
+    margin-top: .9rem;
     font-size: .9rem;
     line-height: 1.48;
   }
@@ -1958,16 +1992,16 @@ button {
   }
 
   .hero-content {
-    max-width: 20.5rem;
+    max-width: 24rem;
   }
 
   .hero-title {
-    max-width: 12ch;
+    max-width: 26ch;
     font-size: clamp(1.68rem, 8vw, 2rem);
   }
 
   .hero-copy {
-    max-width: 19rem;
+    max-width: 22rem;
     font-size: .84rem;
   }
 
