@@ -399,8 +399,7 @@ button {
   height: 100vh;
   object-fit: cover;
   z-index: 1;
-  transform: scaleX(-1); /* Mirror horizontally to put creator on the right */
-  object-position: 53% center; /* Keep creator's head, shoulder, hand, and iPhone fully visible and sharp */
+  object-position: 50% center; /* Keep creator and iPhone fully visible on the right-center */
   transition: transform 0.3s ease, object-position 0.3s ease;
 }
 
@@ -532,7 +531,6 @@ button {
 /* Mobile responsive layout overrides */
 @media (max-width: 959px) {
   .hero-bg-image {
-    transform: scaleX(-1); /* Just mirrored, no extra scale */
     object-position: 72% 20%; /* Shift focal area upwards so the phone is fully visible in the top half */
   }
 
