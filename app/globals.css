@@ -14,8 +14,8 @@
   --pink: #b7358b;
   --gold: #c98a28;
   --nav: rgba(255, 255, 255, .78);
-  --shadow: rgba(18, 28, 45, .14);
-  --shadow-strong: rgba(17, 24, 39, .22);
+  --shadow: rgba(18, 28, 45, .05);
+  --shadow-strong: rgba(17, 24, 39, .15);
   --body-bg:
     radial-gradient(circle at 16% -8%, rgba(103, 232, 249, .42), transparent 30rem),
     radial-gradient(circle at 88% 8%, rgba(244, 114, 182, .24), transparent 28rem),
@@ -37,7 +37,7 @@
   --pink: #ff6bd6;
   --gold: #ffd28a;
   --nav: rgba(6, 8, 16, .72);
-  --shadow: rgba(0, 0, 0, .34);
+  --shadow: rgba(0, 0, 0, .24);
   --shadow-strong: rgba(0, 0, 0, .55);
   --body-bg:
     radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15), transparent 50rem),
@@ -372,36 +372,210 @@ button {
 }
 
 .hero-section {
-  min-height: 100svh;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  min-height: 600px;
   overflow: hidden;
-  padding-top: clamp(8rem, 15svh, 11rem);
-  padding-bottom: clamp(4rem, 10svh, 7rem);
+  background: #020205;
 }
 
-.hero-grid {
-  min-height: calc(100svh - clamp(12rem, 25svh, 18rem));
-  grid-template-columns: minmax(0, 1.3fr) minmax(240px, 0.7fr);
-  gap: clamp(2.5rem, 5vw, 5rem);
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
-.hero-content {
-  max-width: 38rem;
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+  transform: scaleX(-1); /* Mirror horizontally to put creator on the right */
+  object-position: 53% center; /* Keep creator's head, shoulder, hand, and iPhone fully visible and sharp */
+  transition: transform 0.3s ease, object-position 0.3s ease;
 }
 
-.hero-title {
-  max-width: 30ch;
+.hero-creator-fade {
+  display: none; /* Removed the backdrop-filter mask entirely to prevent dark panel rendering bugs */
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+:root[data-theme="dark"] .hero-video-overlay {
+  background: 
+    /* Very subtle horizontal gradient to help with text readability on the left */
+    linear-gradient(90deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0) 60%),
+    /* Vertical gradient matching user's spec (Top: 0.20, Bottom: 0.55) */
+    linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+:root[data-theme="light"] .hero-video-overlay {
+  background: 
+    /* Extremely subtle horizontal fade for dark text readability */
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 30%, rgba(255, 255, 255, 0) 60%),
+    /* Soft top-to-bottom light blend */
+    linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 70%, rgba(247, 248, 251, 0.15) 100%);
+}
+
+.hero-content-new {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content block */
+  align-items: flex-start; /* Left-aligned content block */
+  text-align: left;
+}
+
+.hero-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left-aligned elements inside content block */
+  max-width: 42rem; /* Limits copy column to ~670px */
+  width: 100%;
+}
+
+.hero-title-new {
   color: var(--text);
-  font-size: clamp(2.4rem, 4.6vw, 3.85rem);
-  font-weight: 650;
+  font-size: clamp(2.25rem, 5.2vw, 5.25rem); /* Responsive typography scaling */
+  font-weight: 800; /* Apple-style bold keynote styling */
   line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
-.hero-copy {
-  max-width: 36rem;
-  margin-top: 1.5rem;
+:root[data-theme="light"] .hero-title-new {
+  text-shadow: none; /* Clean flat styling in light mode */
+}
+
+.hero-copy-new {
+  margin-top: 1.25rem;
   color: var(--muted);
-  font-size: clamp(.96rem, 1.2vw, 1.08rem);
-  line-height: 1.65;
+  font-size: clamp(1.05rem, 1.2vw, 1.25rem); /* Slightly larger copy */
+  line-height: 1.55;
+  font-weight: 450;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="light"] .hero-copy-new {
+  text-shadow: none;
+}
+
+.hero-cta-group-new {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 15px 38px;
+  border-radius: 9999px;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.24s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme="dark"] .hero-cta-btn {
+  background: #ffffff;
+  color: #000000;
+}
+
+:root[data-theme="dark"] .hero-cta-btn:hover {
+  transform: scale(1.025);
+  background-color: #f5f5f7;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="light"] .hero-cta-btn {
+  background: #0c0c0f;
+  color: #ffffff;
+}
+
+:root[data-theme="light"] .hero-cta-btn:hover {
+  transform: scale(1.025);
+  background-color: #1a1a22;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta-btn:active {
+  transform: scale(0.97);
+}
+
+/* Mobile responsive layout overrides */
+@media (max-width: 959px) {
+  .hero-bg-image {
+    transform: scaleX(-1); /* Just mirrored, no extra scale */
+    object-position: 72% 20%; /* Shift focal area upwards so the phone is fully visible in the top half */
+  }
+
+  .hero-creator-fade {
+    display: none;
+  }
+
+  :root[data-theme="dark"] .hero-video-overlay {
+    background: 
+      linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.95) 100%);
+  }
+
+  :root[data-theme="light"] .hero-video-overlay {
+    background: 
+      linear-gradient(180deg, rgba(247, 248, 251, 0.3) 0%, rgba(247, 248, 251, 0) 30%, rgba(247, 248, 251, 0.55) 60%, rgba(247, 248, 251, 0.9) 100%);
+  }
+
+  .hero-content-new {
+    justify-content: flex-end; /* Stack text at the bottom */
+    align-items: center; /* Center content horizontally on mobile */
+    text-align: center;
+    padding-bottom: clamp(3.5rem, 8vh, 6rem);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero-text-col {
+    align-items: center;
+  }
+
+  .hero-title-new {
+    text-align: center;
+  }
+
+  .hero-copy-new {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .hero-cta-group-new {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .hero-badge,
@@ -440,31 +614,13 @@ button {
   background: var(--surface-strong);
 }
 
-.hero-cta-group .app-store-button,
-.hero-cta-group .secondary-button {
-  flex: 1;
-  justify-content: center;
-  white-space: nowrap;
-}
 
-.hero-phone-stage {
-  position: relative;
-  width: 100%;
-  min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-phone-wrap {
-  height: 100%;
-}
 
 .section-shell {
   position: relative;
   max-width: 1360px;
   margin: 0 auto;
-  padding: 104px 20px;
+  padding: 160px 24px;
   content-visibility: auto;
   contain-intrinsic-size: 900px;
 }
@@ -560,7 +716,7 @@ button {
 .premium-card {
   position: relative;
   overflow: hidden;
-  border-radius: 28px;
+  border-radius: 24px;
 }
 
 .premium-card h3 {
@@ -630,7 +786,7 @@ button {
 .cinema-card {
   position: relative;
   overflow: hidden;
-  border-radius: 38px;
+  border-radius: 24px;
 }
 
 .feature-icon,
@@ -654,7 +810,7 @@ button {
   position: relative;
   overflow: hidden;
   min-height: 230px;
-  border-radius: 28px;
+  border-radius: 24px;
   padding: 1.85rem;
 }
 
@@ -1425,7 +1581,7 @@ button {
   position: relative;
   overflow: hidden;
   min-height: 138px;
-  border-radius: 28px;
+  border-radius: 24px;
   padding: 22px;
 }
 
@@ -1910,8 +2066,8 @@ button {
   }
 
   .section-shell {
-    padding-top: 88px;
-    padding-bottom: 88px;
+    padding-top: 128px;
+    padding-bottom: 128px;
   }
 
   .floating-panel {
@@ -2065,7 +2221,7 @@ button {
   }
 
   .section-shell {
-    padding: 76px 16px;
+    padding: 96px 16px;
     contain-intrinsic-size: 760px;
   }
 
@@ -2286,3 +2442,31 @@ button {
     transition-duration: .01ms !important;
   }
 }
+
+/* Color contrast overrides to ensure full compatibility with dark and light themes */
+.premium-card h3,
+.answer-card h3,
+.cinema-card h3,
+.platform-card h3,
+.data-card h3,
+.reason-card h3,
+.preview-shell h3,
+.faq-item summary,
+.faq-item h3 {
+  color: var(--text) !important;
+}
+
+.premium-card p,
+.answer-card p,
+.cinema-card p,
+.platform-card p,
+.data-card p,
+.data-card span,
+.reason-card p,
+.faq-item p,
+.preview-shell p,
+.testimonial-card p {
+  color: var(--muted) !important;
+}
+
+
